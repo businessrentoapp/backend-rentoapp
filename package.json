@@ -1,0 +1,50 @@
+{
+  "name": "backend-rentoapp",
+  "version": "1.0.0",
+  "description": "RentoApp powers seamless rental transactions, bridging property owners & tenants with secure, scalable solutions.",
+  "main": "index.js",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node -r dotenv/config index.js",
+    "dev": "nodemon -r dotenv/config index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rento-app-india/backend-rentoapp.git"
+  },
+  "keywords": [
+    "rental property management",
+    "rental marketplace",
+    "PG accommodation",
+    "flats for rent",
+    "rooms for rent",
+    "co-living spaces",
+    "unisex PG",
+    "paying guest services",
+    "tenant management",
+    "landlord solutions",
+    "hostel booking",
+    "student housing",
+    "shared apartments",
+    "rental agreements",
+    "property listing",
+    "rental app"
+  ],
+  "author": "Kailash Parihar",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/rento-app-india/backend-rentoapp/issues"
+  },
+  "homepage": "https://github.com/rento-app-india/backend-rentoapp#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
