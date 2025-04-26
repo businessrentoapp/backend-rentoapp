@@ -1,25 +1,8 @@
-import express from "express";
+// Load environment variables from the .env file to process.env
+import "./src/config/dotenv.config.js";
 
-const server = express();
-const port = process.env.PORT || 3000;
+// Import the function to initialize and start the server
+import startServer from "./src/server.js";
 
-server.use(express.json());
-
-server.get("/", (req, res) => {
-  res.send("Welcome to Livora Tech Solutions Pvt Ltd.");
-});
-
-// Handle undefined routes (404 handler)
-server.use((req, res) => {
-  res.status(404).json({ error: "Route not found" });
-});
-
-// Global error handler
-server.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ error: "Internal Server Error" });
-});
-
-server.listen(port, () => {
-  console.log(`\nServer is running at http://localhost:${port}`);
-});
+// Start the server
+startServer();
