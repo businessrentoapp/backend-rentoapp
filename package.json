@@ -7,12 +7,13 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node -r dotenv/config index.js",
-    "dev": "nodemon -r dotenv/config index.js"
+    "start": "node index.js",
+    "dev": "cross-env NODE_ENV=development nodemon index.js",
+    "pro": "cross-env NODE_ENV=production nodemon index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rento-app-india/backend-rentoapp.git"
+    "url": "git+https://github.com/businessrentoapp/backend-rentoapp.git"
   },
   "keywords": [
     "rental property management",
@@ -33,18 +34,21 @@
     "rental app"
   ],
   "author": "Kailash Parihar",
-  "license": "UNLICENSED",
+  "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/rento-app-india/backend-rentoapp/issues"
+    "url": "https://github.com/businessrentoapp/backend-rentoapp/issues"
   },
-  "homepage": "https://github.com/rento-app-india/backend-rentoapp#readme",
+  "homepage": "https://github.com/businessrentoapp/backend-rentoapp#readme",
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.797.0",
+    "@aws-sdk/lib-dynamodb": "^3.797.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
+    "dotenv": "^16.5.0",
     "express": "^5.1.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.10"
   }
 }
